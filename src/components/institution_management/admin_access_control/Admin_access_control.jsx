@@ -59,7 +59,7 @@ const useStyles = makeStyles({
   },
 });
 
-const ADMIN_API_BASE = "http://localhost:8000/api/admin-management";
+const ADMIN_API_BASE = "https://lms1-1-p88i.onrender.com/api/admin-management";
 
 const AdminAccessControl = () => {
   const classes = useStyles();
@@ -142,7 +142,7 @@ const AdminAccessControl = () => {
     try {
       const token = localStorage.getItem("accessToken");
       const response = await axios.get(
-        "http://localhost:8000/api/institutions/",
+        "https://lms1-1-p88i.onrender.com/api/institutions/",
         {
           headers: { Authorization: `Bearer ${token}` },
         }

@@ -123,7 +123,7 @@ const AdminPermissionsDialog = ({ open, onClose, selectedAdmin, onSuccess }) => 
       const token = localStorage.getItem('accessToken');
       
       const response = await axios.get(
-        `http://localhost:8000/api/admin-management/${selectedAdmin.id}/permissions/`,
+        `https://lms1-1-p88i.onrender.com/api/admin-management/${selectedAdmin.id}/permissions/`,
         {
           headers: { 
             Authorization: `Bearer ${token}`,
@@ -187,7 +187,7 @@ const AdminPermissionsDialog = ({ open, onClose, selectedAdmin, onSuccess }) => 
       const token = localStorage.getItem('accessToken');
       
       const response = await axios.post(
-        `http://localhost:8000/api/admin-management/${selectedAdmin.id}/manage_permissions/`,
+        `https://lms1-1-p88i.onrender.com/api/admin-management/${selectedAdmin.id}/manage_permissions/`,
         { permissions: allPermissions },
         {
           headers: { 

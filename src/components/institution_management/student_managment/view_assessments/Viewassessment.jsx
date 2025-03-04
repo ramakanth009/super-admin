@@ -153,7 +153,7 @@ const ViewAssessment = ({ studentId, open, onClose }) => {
       const token = localStorage.getItem('accessToken');
       
       const response = await fetch(
-        `http://localhost:8000/api/student-management/${studentId}/assessments/`,
+        `https://lms1-1-p88i.onrender.com/api/student-management/${studentId}/assessments/`,
         {
           headers: { 
             Authorization: `Bearer ${token}`,

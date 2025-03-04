@@ -54,7 +54,7 @@ const StudentStats = () => {
       setLoading(true);
       const token = localStorage.getItem('accessToken');
       const response = await fetch(
-        'http://localhost:8000/api/student-management/stats/',
+        'https://lms1-1-p88i.onrender.com/api/student-management/stats/',
         {
           headers: { Authorization: `Bearer ${token}` },
         }

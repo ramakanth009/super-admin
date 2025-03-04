@@ -171,7 +171,7 @@ const StudentManagement = () => {
     try {
       const token = localStorage.getItem("accessToken");
       const response = await fetch(
-        "http://localhost:8000/api/student-management/",
+        "https://lms1-1-p88i.onrender.com/api/student-management/",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -188,7 +188,7 @@ const StudentManagement = () => {
   const fetchInstitutions = async () => {
     try {
       const token = localStorage.getItem("accessToken");
-      const response = await fetch("http://localhost:8000/api/institutions/", {
+      const response = await fetch("https://lms1-1-p88i.onrender.com/api/institutions/", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();
@@ -239,7 +239,7 @@ const StudentManagement = () => {
       setLoading(true);
       const token = localStorage.getItem("accessToken");
       const response = await fetch(
-        "http://localhost:8000/api/student-management/",
+        "https://lms1-1-p88i.onrender.com/api/student-management/",
         {
           method: "POST",
           headers: {
@@ -280,7 +280,7 @@ const StudentManagement = () => {
     try {
       const token = localStorage.getItem("accessToken");
       await fetch(
-        `http://localhost:8000/api/student-management/${studentId}/update_status/`,
+        `https://lms1-1-p88i.onrender.com/api/student-management/${studentId}/update_status/`,
         {
           method: "PUT",
           headers: {
@@ -303,7 +303,7 @@ const StudentManagement = () => {
       setLoading(true);
       const token = localStorage.getItem("accessToken");
       const response = await fetch(
-        `http://localhost:8000/api/student-management/${selectedStudent.id}/delete_student/`,
+        `https://lms1-1-p88i.onrender.com/api/student-management/${selectedStudent.id}/delete_student/`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },
@@ -327,7 +327,7 @@ const StudentManagement = () => {
       setLoading(true);
       const token = localStorage.getItem("accessToken");
       const response = await fetch(
-        `http://localhost:8000/api/student-management/${selectedStudent.id}/handle_profile_request/`,
+        `https://lms1-1-p88i.onrender.com/api/student-management/${selectedStudent.id}/handle_profile_request/`,
         {
           method: "POST",
           headers: {
@@ -356,7 +356,7 @@ const StudentManagement = () => {
       setLoading(true);
       const token = localStorage.getItem("accessToken");
       const response = await fetch(
-        `http://localhost:8000/api/student-management/${selectedStudent.id}/disable_profile_update/`,
+        `https://lms1-1-p88i.onrender.com/api/student-management/${selectedStudent.id}/disable_profile_update/`,
         {
           method: "POST",
           headers: {

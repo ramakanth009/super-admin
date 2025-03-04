@@ -120,7 +120,7 @@ const UpdateCareerPath = ({ curriculum, onSuccess, onCancel }) => {
   const fetchInstitutions = async () => {
     try {
       const token = localStorage.getItem('accessToken');
-      const response = await axios.get('http://localhost:8000/api/institutions/', {
+      const response = await axios.get('https://lms1-1-p88i.onrender.com/api/institutions/', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setInstitutions(Array.isArray(response.data) ? response.data : []);
@@ -256,7 +256,7 @@ const UpdateCareerPath = ({ curriculum, onSuccess, onCancel }) => {
 
       const token = localStorage.getItem('accessToken');
       const response = await axios.put(
-        `http://localhost:8000/api/curriculum/${curriculum.id}/`,
+        `https://lms1-1-p88i.onrender.com/api/curriculum/${curriculum.id}/`,
         apiData,
         {
           headers: {

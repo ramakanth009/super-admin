@@ -87,7 +87,7 @@ const AdminStats = () => {
       if (!refreshing) setLoading(true);
       
       const token = localStorage.getItem('accessToken');
-      const response = await axios.get('http://localhost:8000/api/admin-management/admin_stats/', {
+      const response = await axios.get('https://lms1-1-p88i.onrender.com/api/admin-management/admin_stats/', {
         headers: { Authorization: `Bearer ${token}` }
       });
       

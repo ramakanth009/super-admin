@@ -351,7 +351,7 @@ const CreateAssessment = ({ onSuccess, onCancel }) => {
 
       const token = localStorage.getItem('accessToken');
       const response = await axios.post(
-        'http://localhost:8000/api/assessments/',
+        'https://lms1-1-p88i.onrender.com/api/assessments/',
         submissionData,
         {
           headers: {

@@ -155,7 +155,7 @@ const InstitutionsList = () => {
         queryParams.append('is_active', filters.is_active);
       
       const queryString = queryParams.toString();
-      const url = `http://localhost:8000/api/institutions/${queryString ? `?${queryString}` : ''}`;
+      const url = `https://lms1-1-p88i.onrender.com/api/institutions/${queryString ? `?${queryString}` : ''}`;
       
       const token = localStorage.getItem("accessToken");
       const response = await axios.get(url, {
@@ -214,7 +214,7 @@ const InstitutionsList = () => {
   const handleStatusToggle = async (institution) => {
     try {
       const token = localStorage.getItem("accessToken");
-      const endpoint = `http://localhost:8000/api/institutions/${institution.id}/${institution.is_active ? "deactivate" : "activate"}/`;
+      const endpoint = `https://lms1-1-p88i.onrender.com/api/institutions/${institution.id}/${institution.is_active ? "deactivate" : "activate"}/`;
 
       const response = await axios.post(
         endpoint,
@@ -254,7 +254,7 @@ const InstitutionsList = () => {
       let response;
       if (selectedInstitution) {
         response = await axios.put(
-          `http://localhost:8000/api/institutions/${selectedInstitution.id}/`,
+          `https://lms1-1-p88i.onrender.com/api/institutions/${selectedInstitution.id}/`,
           requestData,
           config
         );
@@ -264,7 +264,7 @@ const InstitutionsList = () => {
         );
       } else {
         response = await axios.post(
-          "http://localhost:8000/api/institutions/",
+          "https://lms1-1-p88i.onrender.com/api/institutions/",
           requestData,
           config
         );
@@ -291,7 +291,7 @@ const InstitutionsList = () => {
     try {
       const token = localStorage.getItem("accessToken");
       await axios.delete(
-        `http://localhost:8000/api/institutions/${selectedInstitution.id}/`,
+        `https://lms1-1-p88i.onrender.com/api/institutions/${selectedInstitution.id}/`,
         { 
           headers: { Authorization: `Bearer ${token}` }
         }

@@ -111,7 +111,7 @@ const AssessmentCenter = () => {
       if (appliedFilters.institution) queryParams.append('institution', appliedFilters.institution);
       
       const queryString = queryParams.toString();
-      const url = `http://localhost:8000/api/assessments/${queryString ? `?${queryString}` : ''}`;
+      const url = `https://lms1-1-p88i.onrender.com/api/assessments/${queryString ? `?${queryString}` : ''}`;
       
       const response = await axios.get(url, {
         headers: { Authorization: `Bearer ${token}` }
@@ -184,7 +184,7 @@ const AssessmentCenter = () => {
   const handleDeleteAssessment = async (id) => {
     try {
       const token = localStorage.getItem('accessToken');
-      await axios.delete(`http://localhost:8000/api/assessments/${id}/`, {
+      await axios.delete(`https://lms1-1-p88i.onrender.com/api/assessments/${id}/`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       

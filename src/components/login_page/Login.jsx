@@ -164,7 +164,7 @@ const LoginPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/auth/super-admin/login/",
+        "https://lms1-1-p88i.onrender.com/api/auth/super-admin/login/",
         {
           email: formData.email,
           password: formData.password,

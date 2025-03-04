@@ -85,7 +85,7 @@ const ViewAdminDialog = ({ open, onClose, admin }) => {
       
       // Fetch admin details
       const detailsResponse = await axios.get(
-        `http://localhost:8000/api/admin-management/${admin.id}/`,
+        `https://lms1-1-p88i.onrender.com/api/admin-management/${admin.id}/`,
         {
           headers: { 
             Authorization: `Bearer ${token}`,
@@ -98,7 +98,7 @@ const ViewAdminDialog = ({ open, onClose, admin }) => {
       
       // Fetch permissions
       const permissionsResponse = await axios.get(
-        `http://localhost:8000/api/admin-management/${admin.id}/permissions/`,
+        `https://lms1-1-p88i.onrender.com/api/admin-management/${admin.id}/permissions/`,
         {
           headers: { 
             Authorization: `Bearer ${token}`,
