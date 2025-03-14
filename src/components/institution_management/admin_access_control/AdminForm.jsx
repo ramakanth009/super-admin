@@ -57,7 +57,8 @@ const departments = [
   'Electrical and Electronics Engineering',
   'Electrical and Communication Engineering',
   'Mechanical Engineering',
-  'Computer Science and Engineering'
+  'Computer Science and Engineering',
+  'Aerospace Engineering'
 ];
 
 // Default permissions configuration

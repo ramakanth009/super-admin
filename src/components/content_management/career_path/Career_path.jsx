@@ -102,7 +102,7 @@ const CareerPath = () => {
       if (appliedFilters.institution) queryParams.append('institution', appliedFilters.institution);
       
       const queryString = queryParams.toString();
-      const url = `https://lms1-1-p88i.onrender.com/api/curriculum/${queryString ? `?${queryString}` : ''}`;
+      const url = `http://localhost:8000/api/curriculum/${queryString ? `?${queryString}` : ''}`;
       
       const response = await axios.get(url, {
         headers: { Authorization: `Bearer ${token}` }
@@ -171,7 +171,7 @@ const CareerPath = () => {
   const handleDeleteCareerPath = async (id) => {
     try {
       const token = localStorage.getItem('accessToken');
-      await axios.delete(`https://lms1-1-p88i.onrender.com/api/curriculum/${id}/`, {
+      await axios.delete(`http://localhost:8000/api/curriculum/${id}/`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       

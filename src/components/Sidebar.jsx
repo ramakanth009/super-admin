@@ -121,7 +121,7 @@ const Sidebar = () => {
   const handleLogout = () => {
     // Clear all authentication data
     localStorage.removeItem('accessToken');
-    localStorage.removeItem('refreshToken');
+    // localStorage.removeItem('refreshToken');
     localStorage.removeItem('isAuthenticated');
     localStorage.removeItem('rememberedEmail');
     

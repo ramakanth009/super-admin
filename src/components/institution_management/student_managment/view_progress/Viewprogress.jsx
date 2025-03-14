@@ -112,7 +112,7 @@ const ViewProgress = ({ studentId, open, onClose }) => {
       const token = localStorage.getItem('accessToken');
       
       const response = await fetch(
-        `https://lms1-1-p88i.onrender.com/api/student-management/${studentId}/progress/`,
+        `http://localhost:8000/api/student-management/${studentId}/progress/`,
         {
           headers: { 
             Authorization: `Bearer ${token}`,

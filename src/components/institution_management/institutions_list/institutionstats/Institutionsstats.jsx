@@ -95,7 +95,7 @@ const InstitutionStats = ({ institutionId }) => {
         throw new Error('No authentication token found');
       }
 
-      const response = await fetch(`https://lms1-1-p88i.onrender.com/api/institutions/${institutionId}/stats/`, {
+      const response = await fetch(`http://localhost:8000/api/institutions/${institutionId}/stats/`, {
         headers: { 
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'

@@ -106,7 +106,7 @@ const Notifications = () => {
     setLoading(true);
     try {
       const token = localStorage.getItem('accessToken');
-      const response = await axios.get('https://lms1-1-p88i.onrender.com/api/profiles/my_notifications/', {
+      const response = await axios.get('http://localhost:8000/api/profiles/my_notifications/', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -135,7 +135,7 @@ const Notifications = () => {
     setMarkingAllRead(true);
     try {
       const token = localStorage.getItem('accessToken');
-      await axios.post('https://lms1-1-p88i.onrender.com/api/profiles/mark_all_notifications_read/', {}, {
+      await axios.post('http://localhost:8000/api/profiles/mark_all_notifications_read/', {}, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -159,7 +159,7 @@ const Notifications = () => {
   const handleMarkAsRead = async (id) => {
     try {
       const token = localStorage.getItem('accessToken');
-      await axios.post(`https://lms1-1-p88i.onrender.com/api/profiles/${id}/mark_notification_read/`, {}, {
+      await axios.post(`http://localhost:8000/api/profiles/${id}/mark_notification_read/`, {}, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

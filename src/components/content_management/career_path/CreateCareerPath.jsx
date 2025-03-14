@@ -153,7 +153,7 @@
 //   const fetchInstitutions = async () => {
 //     try {
 //       const token = localStorage.getItem('accessToken');
-//       const response = await axios.get('https://lms1-1-p88i.onrender.com/api/institutions/', {
+//       const response = await axios.get('http://localhost:8000/api/institutions/', {
 //         headers: { Authorization: `Bearer ${token}` }
 //       });
 //       setInstitutions(Array.isArray(response.data) ? response.data : []);
@@ -374,7 +374,7 @@
 
 //       const token = localStorage.getItem('accessToken');
 //       const response = await axios.post(
-//         'https://lms1-1-p88i.onrender.com/api/curriculum/',
+//         'http://localhost:8000/api/curriculum/',
 //         submissionData,
 //         {
 //           headers: {
@@ -777,7 +777,7 @@ const CreateCareerPath = ({ onSuccess, onCancel }) => {
   const fetchInstitutions = async () => {
     try {
       const token = localStorage.getItem('accessToken');
-      const response = await axios.get('https://lms1-1-p88i.onrender.com/api/institutions/', {
+      const response = await axios.get('http://localhost:8000/api/institutions/', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setInstitutions(Array.isArray(response.data) ? response.data : []);
@@ -913,7 +913,7 @@ const CreateCareerPath = ({ onSuccess, onCancel }) => {
 
       const token = localStorage.getItem('accessToken');
       const response = await axios.post(
-        'https://lms1-1-p88i.onrender.com/api/curriculum/',
+        'http://localhost:8000/api/curriculum/',
         apiData,
         {
           headers: {

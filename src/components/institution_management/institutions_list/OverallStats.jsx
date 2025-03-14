@@ -72,7 +72,7 @@ const OverallStats = () => {
     try {
       setError(null);
       const token = localStorage.getItem('accessToken');
-      const response = await axios.get('https://lms1-1-p88i.onrender.com/api/institutions/overall_stats/', {
+      const response = await axios.get('http://localhost:8000/api/institutions/overall_stats/', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setStats(response.data);

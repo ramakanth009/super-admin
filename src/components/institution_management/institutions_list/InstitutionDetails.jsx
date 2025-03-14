@@ -48,7 +48,7 @@ const InstitutionDetails = ({ institutionId }) => {
       try {
         const token = localStorage.getItem("accessToken");
         const response = await axios.get(
-          `https://lms1-1-p88i.onrender.com/api/institutions/${institutionId}/`,
+          `http://localhost:8000/api/institutions/${institutionId}/`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }

@@ -68,7 +68,7 @@ const AdminFilters = ({ onFilterChange }) => {
   const fetchInstitutions = async () => {
     try {
       const token = localStorage.getItem('accessToken');
-      const response = await axios.get('https://lms1-1-p88i.onrender.com/api/institutions/', {
+      const response = await axios.get('http://localhost:8000/api/institutions/', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setInstitutions(Array.isArray(response.data) ? response.data : []);
@@ -80,7 +80,7 @@ const AdminFilters = ({ onFilterChange }) => {
   const fetchDepartments = async () => {
     try {
       const token = localStorage.getItem('accessToken');
-      const response = await axios.get('https://lms1-1-p88i.onrender.com/api/admin-management/', {
+      const response = await axios.get('http://localhost:8000/api/admin-management/', {
         headers: { Authorization: `Bearer ${token}` }
       });
       
